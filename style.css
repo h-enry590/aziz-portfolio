@@ -12,8 +12,8 @@
   --blue: #4a90d9;
   --light-blue: #6db3f2;
   --white: #ffffff;
-  --bg-deep: #0a0010;
-  --bg-mid: #12001e;
+  --bg-deep: #050a1a;
+  --bg-mid: #0a1230;
   --bg-surface: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(74, 144, 217, 0.1);
   --font-heading: "Playfair Display", serif;
@@ -78,7 +78,7 @@ body::before {
       rgba(74, 144, 217, 0.06) 0%,
       transparent 45%
     ),
-    linear-gradient(135deg, #0a0010, #0a1628, #0d1f3c, #0a1628, #0a0010);
+    linear-gradient(135deg, #050a1a, #0a1a3a, #0f2a50, #0a1a3a, #050a1a);
   background-size: 300% 300%;
   animation: aurora 20s ease infinite;
 }
@@ -454,21 +454,9 @@ header h1 {
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  background: linear-gradient(
-    135deg,
-    var(--blue) 0%,
-    var(--light-blue) 30%,
-    var(--white) 60%,
-    var(--blue) 85%,
-    var(--light-blue) 100%
-  );
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 4s ease infinite;
+  color: var(--white);
   text-transform: uppercase;
-  filter: drop-shadow(0 0 50px rgba(255, 215, 0, 0.15));
+  text-shadow: 0 0 40px rgba(74, 144, 217, 0.2);
   position: relative;
   display: inline-block;
 }
@@ -656,7 +644,7 @@ h2 {
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 700;
   margin-bottom: 0.4rem;
-  color: var(--light-blue);
+  color: var(--white);
   letter-spacing: -0.01em;
   line-height: 1.15;
   position: relative;
@@ -666,7 +654,7 @@ h3 {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--light-blue);
+  color: var(--white);
   margin-bottom: 0.3rem;
   letter-spacing: -0.01em;
   line-height: 1.3;
