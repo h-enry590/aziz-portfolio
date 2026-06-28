@@ -283,6 +283,7 @@ body::after {
   width: 100%;
   border-radius: 16px;
   object-fit: cover;
+  object-position: center 20%;
   border: 1px solid rgba(74, 144, 217, 0.15);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -296,16 +297,48 @@ body::after {
 
 .img-featured {
   margin: 1.5rem 0;
-  max-height: 400px;
+  max-height: 500px;
   border-radius: 20px;
   display: block;
 }
 
 .img-inline {
-  max-height: 200px;
   width: 100%;
   margin-top: 1rem;
   border-radius: 12px;
+  max-height: 260px;
+}
+
+/* Image overlay card for interests */
+.img-overlay-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 1.2rem;
+}
+
+.img-overlay-card .portfolio-img {
+  margin: 0;
+  max-height: 280px;
+  object-position: center 30%;
+}
+
+.img-overlay-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.2rem 1.2rem;
+  background: linear-gradient(transparent, rgba(5, 10, 26, 0.85));
+  pointer-events: none;
+}
+
+.img-overlay-card .overlay p {
+  color: var(--white);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .img-row {
@@ -324,7 +357,7 @@ body::after {
     grid-template-columns: 1fr;
   }
   .img-featured {
-    max-height: 250px;
+    max-height: 300px;
   }
 }
 
@@ -393,8 +426,8 @@ header::after {
 }
 
 .avatar-placeholder {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -408,6 +441,7 @@ header::after {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 15%;
   border: 3px solid var(--blue);
   box-shadow:
     0 4px 25px rgba(74, 144, 217, 0.3),
@@ -986,9 +1020,8 @@ footer {
   }
 
   .avatar-placeholder {
-    width: 80px;
-    height: 80px;
-    font-size: 1.8rem;
+    width: 100px;
+    height: 100px;
   }
 
   .grid-2col {
